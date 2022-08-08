@@ -50,7 +50,7 @@ body{
     border-radius: 30px;
     width: 60%;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
 }
 
 button {
@@ -76,7 +76,7 @@ input:focus {
     border: none;
 }
 
-#b2 {
+#b2 #b4{
     border: 1px solid black;
 }
 
@@ -85,14 +85,9 @@ input:focus {
     color: white;
 }
 
-#b4 {
-    border: 1px solid black;
-}
-
 .header {
-    /* background-color: rgb(236, 236, 236); */
-    background-color: red;
     height: 400px;
+    margin-top: 20px;
     margin-left: 7%;
     margin-right: 7%;
     position: relative;
@@ -101,21 +96,23 @@ input:focus {
 
 .intro {
     position: absolute;
-    border: 1px solid black;
+    border: 5px solid white;
+    background-color: white;
     text-align: center;
     width: 20%;
-    background-color: transparent;
+    margin-top: 50px;
+    margin-left: 60px;
 }
 
 #image1 {
-    position: relative;
+    object-fit:cover;
     height: 100%;
     width: 100%;
 }
 
 .courses-section{
-    margin-left: 7%;
-    margin-right: 7%;
+    margin-left: 9%;
+    margin-right: 9%;
     margin-bottom: 20%;
     margin-top: 3%;
 }
@@ -123,19 +120,24 @@ input:focus {
 .tabs button{
     color: grey;
     font-size: 19px;
+    padding-bottom: 20px;
 }
 
 .tabs button:hover{
     color: black;
 }
 
-.courses-list{
-    white-space: pre-line;
+.python-courses{
     padding-left: 50px;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 30px;
     border: 1px solid black;
     height: max-content;
-    width: 100%;
+    width: 100%vh;
     overflow: auto;
 }
+
+.courses-intro{
+    white-space: pre-line;
+}
+
