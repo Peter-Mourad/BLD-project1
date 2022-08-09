@@ -1,4 +1,4 @@
-body{
+body {
     font-family: sans-serif;
     font-size: 18px;
 }
@@ -22,7 +22,7 @@ body{
     }
 } */
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 769px) {
     .hide1 {
         display: none;
     }
@@ -64,7 +64,6 @@ button {
     flex-grow: 20;
     border: none;
     background-color: transparent;
-    border: none;
 }
 
 input:focus {
@@ -73,14 +72,13 @@ input:focus {
 
 #b1 {
     margin-left: 10px;
-    border: none;
 }
 
-#b2 #b4{
+.bordered {
     border: 1px solid black;
 }
 
-#b3 {
+.reversed {
     background-color: black;
     color: white;
 }
@@ -105,19 +103,23 @@ input:focus {
 }
 
 #image1 {
-    object-fit:cover;
+    object-fit: cover;
     height: 100%;
     width: 100%;
 }
 
-.courses-section{
+.courses-section {
     margin-left: 9%;
     margin-right: 9%;
     margin-bottom: 20%;
     margin-top: 3%;
 }
 
-.tabs button{
+.courses-tabs{
+    font-weight: bolder;
+}
+
+.tabs button {
     color: grey;
     font-size: 19px;
     padding-bottom: 20px;
@@ -127,8 +129,8 @@ input:focus {
     color: black;
 }
 
-.python-courses{
-    padding-left: 50px;
+.courses-div{
+    padding-left: 40px;
     padding-top: 20px;
     padding-bottom: 30px;
     border: 1px solid black;
@@ -141,3 +143,42 @@ input:focus {
     white-space: pre-line;
 }
 
+.courses-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.course{
+    display: block;
+    color: black;
+    text-decoration: none;
+    width: 100%;
+}
+
+.course>img {
+    width: 230px;
+}
+
+.course-item {
+    flex-basis: 18%;
+    padding: 0%;
+}
+
+.material-symbols-outlined{
+    color: gold;
+}
+
+.rate{
+    stroke: 20px;
+    size: 200px;
+    padding-right: 5px;
+    color: green;
+    font-weight: bold;
+}
+
+.price {
+    font-weight: bold;
+}
