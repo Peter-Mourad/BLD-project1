@@ -3,32 +3,6 @@ body {
     font-size: 18px;
 }
 
-/* @media screen and (max-width: 768px){
-    body{
-        background-color: red;
-    }
-    .hide2{
-        display: none;
-    }
-    .navigation-bar {
-        display: flex;
-        flex-direction: row;
-        height: 50px;
-        gap: 200px;
-        width: 100%;
-        padding: 4px;
-        padding-bottom: 10px;
-        border-bottom: 2px solid rgb(241, 220, 220);
-    }
-} */
-
-@media screen and (min-width: 769px) {
-    .hide1 {
-        display: none;
-    }
-}
-
-
 .navigation-bar {
     display: flex;
     flex-direction: row;
@@ -53,7 +27,7 @@ body {
     gap: 6px;
 }
 
-button {
+button{
     white-space: nowrap;
     text-align: center;
     border: none;
@@ -172,8 +146,6 @@ input:focus {
 }
 
 .rate{
-    stroke: 20px;
-    size: 200px;
     padding-right: 5px;
     color: green;
     font-weight: bold;
@@ -181,4 +153,48 @@ input:focus {
 
 .price {
     font-weight: bold;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .navigation-bar{
+        overflow: hidden;
+        display: flex;
+    }
+
+    .navigation-bar>button>img{
+        height: 80%;
+        padding-inline: 30vh;
+        width: fit-content;
+    }
+
+    .hide2 {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: blue;
+    }
+
+    .header>*{
+        width: 100vh;
+        position: relative;
+    }
+
+    .intro{
+        width: inherit;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+
+    .hide1 {
+        display: none;
+    }
 }
