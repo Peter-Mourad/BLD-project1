@@ -1,0 +1,23 @@
+{
+  "name": "project1-phase1",
+  "version": "1.0.0",
+  "description": "This project's aim is to create basic structure using semantic HTML and apply basic css styling with building responsive design to udemy homepage.",
+  "main": "script.js",
+  "scripts": {
+    "start": "json-server --watch ./db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Peter-Mourad/project1-phase1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Peter-Mourad/project1-phase1/issues"
+  },
+  "homepage": "https://github.com/Peter-Mourad/project1-phase1#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
