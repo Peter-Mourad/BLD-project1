@@ -34,7 +34,7 @@ button{
     background-color: transparent;
 }
 
-#i1 {
+#input-bar {
     flex-grow: 20;
     border: none;
     background-color: transparent;
@@ -44,7 +44,7 @@ input:focus {
     outline-width: 0;
 }
 
-#b1 {
+#search-button {
     margin-left: 10px;
 }
 
