@@ -14,23 +14,41 @@ function rateHtmlFormatting(rate){
     return html;
 }
 
+const getCourse = (data) => {
+    let html = ``;
+    html += `<li class="course-item">
+                <a href="${data.link}" target="_blank" class="course">
+                    <img src="${data.image}">
+                    <p><strong>${data.title}</strong></p>
+                    <p class="author">${data.author}</p>
+                    <div class="rate-section">
+                        ${rateHtmlFormatting(data.rate)}
+                    </div>
+                    <p class="price">E£${data.price}</p>
+                </a>
+            </li>\n`;
+    return html;
+}
+
 window.onload = async () => {
     const data = await loadData();
     let html = ``;
-    for (let i = 0; data[i]; i++){
-        html += `<li class="course-item">
-                    <a href="${data[i].link}" target="_blank" class="course">
-                        <img src="${data[i].image}">
-                        <p><strong>${data[i].title}</strong></p>
-                        <p class="author">${data[i].author}</p>
-                        <div class="rate-section">
-                            ${rateHtmlFormatting(data[i].rate)}
-                        </div>
-                        <p class="price">E£${data[i].price}</p>
-                    </a>
-                </li>\n`;
-    }
-    console.log(html);
-    const subject = document.querySelector('.courses-list');
-    subject.insertAdjacentHTML('afterbegin', html);
+    for (let i = 0; data[i]; i++) 
+        html += getCourse(data[i]);
+
+    const coursesList = document.querySelector('.courses-list');
+    coursesList.insertAdjacentHTML('afterbegin', html);
+
+    let searchButton = document.getElementById('search-button');
+    searchButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        coursesList.innerHTML = '';
+        const searchText = document.getElementById("input-bar").value.trim();
+        html = ``;
+        for (let i = 0; data[i]; i++){
+            if(data[i].title.toLowerCase().includes(searchText))
+                html += getCourse(data[i]);
+        }
+        coursesList.insertAdjacentHTML('afterbegin', html);
+    });
 };
