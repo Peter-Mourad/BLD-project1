@@ -43,7 +43,7 @@ window.onload = async () => {
     searchButton.addEventListener("click", (e) => {
         e.preventDefault();
         coursesList.innerHTML = '';
-        const searchText = document.getElementById("input-bar").value.trim();
+        const searchText = document.getElementById("input-bar").value.trim().toLowerCase();
         html = ``;
         for (let i = 0; data[i]; i++){
             if(data[i].title.toLowerCase().includes(searchText))
