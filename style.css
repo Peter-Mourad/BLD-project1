@@ -13,7 +13,6 @@ body {
     padding-bottom: 10px;
     border-bottom: 2px solid rgb(241, 220, 220);
     overflow: auto;
-
 }
 
 .search-bar {
@@ -65,7 +64,6 @@ input:focus {
     position: relative;
 }
 
-
 .intro {
     position: absolute;
     border: 5px solid white;
@@ -85,60 +83,106 @@ input:focus {
 .courses-section {
     margin-left: 9%;
     margin-right: 9%;
-    margin-bottom: 20%;
+    margin-bottom: 5%;
     margin-top: 3%;
 }
 
-.courses-tabs{
+.nav-tabs{
+    margin-bottom: 2px;
+    margin-left: 2px;
+    padding-left: 0%;
+}
+
+.nav-item{
     font-weight: bolder;
+    font-size: 22px;
+    padding: 20px;
+    padding-left: 0px;
+    border: none;
+    display: inline-flex;
+    list-style: none;
+    text-decoration: none;
 }
 
-.tabs button {
-    color: grey;
-    font-size: 19px;
-    padding-bottom: 20px;
-}
-
-.tabs button:hover{
+.nav-item a:hover,
+li.active > a{
     color: black;
+    border: none;
+}
+
+.nav-item a{
+    color: grey;
+    text-decoration: none;
 }
 
 .courses-div{
-    padding-left: 40px;
+    padding-left: 30px;
     padding-top: 20px;
     padding-bottom: 30px;
+    padding-right: 20px;
     border: 1px solid black;
-    height: max-content;
     width: 100%vh;
-    overflow: auto;
 }
 
 .courses-intro{
     white-space: pre-line;
 }
 
-.courses-list {
-    list-style-type: none;
+.carousel-container{
+    width: 1200;
+    min-height: 260px;
+    position: relative;
+}
+
+.carousel-inner{
+    overflow: hidden;
+}
+
+.courses-list{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
+    transition: transform 0.3s;
 }
 
-.course{
-    display: block;
-    color: black;
+.card-container{
+    flex-shrink: 0;
+    width: 20%;
+    height: 100%;
+    padding: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.course-item > a{
     text-decoration: none;
+    color: black;
+}
+
+.course-item > a > img{
     width: 100%;
+    height: 70%;
 }
 
-.course>img {
-    width: 230px;
+.material-icons{
+    color: white;
 }
 
-.course-item {
-    flex-basis: 18%;
-    margin: 0%;
+.nav-arrows button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+    background-color: black;
+}
+
+.prev{
+    left: -20px;
+}
+
+.next{
+    right: -20px;
 }
 
 .author{
@@ -147,18 +191,18 @@ input:focus {
 }
 
 .rate-section {
-    align-items:center;
+    align-items: center;
     display: flex;
 }
 
-.material-symbols-outlined{
+.fa{
     color: gold;
-    padding: 0px;
+    padding-top: 3px;
+    align-items: center;
 }
 
 .rate{
     padding-right: 10px;
-    padding-top: 5px;
     color: green;
     font-weight: bold;
 }
@@ -167,9 +211,24 @@ input:focus {
     font-weight: bold;
 }
 
+.top-categories{
+    margin-left: 9%;
+    margin-right: 9%;
+    margin-bottom: 50px;
+}
+
+.top-categories > p{
+    width: 100%;
+    font-size: 25px;
+}
+
+.top-categories > div{
+    border: 2px solid black;
+    size: fit-content;
+    overflow: auto;
+}
 
 @media screen and (max-width: 768px) {
-
     .navigation-bar{
         overflow: hidden;
         display: flex;
